@@ -1,0 +1,337 @@
+$primary: #00D4FF;
+$text: #ADBDCC;
+$text-white: #FFFFFF;
+$text-black: #0A2540;
+$background: #EEF2FA;
+
+.dashboard {
+  background-color: $background;
+  background-image: url(./images/bg-blue.png);
+  background-size: cover;
+  background-position: center 38px;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  
+  h1 {
+    margin: 0 0 25px;
+    color: $text-white;
+    font-size: 38px;
+    line-height: 55px;
+    font-weight: 500;
+  }
+
+  a {
+    color: $text-white;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 231px;
+    right: -155px;
+    background: transparent url(./images/hexagonal.png) no-repeat;
+    height: 876px;
+    width: 921px;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 220px;
+    left: -102px;
+    background: transparent url(./images/triangle-orange.png) no-repeat;
+    width: 359px;
+    height: 366px;
+    z-index: 1;
+  }
+
+  .triangle-green {
+    position: absolute;
+    top: 220px;
+    left: -90px;
+    background: transparent url(./images/triangle-green.png) no-repeat;
+    width: 249px;
+    height: 253px;
+    z-index: 1;
+  }
+}
+
+
+.btn-primary {
+  background-color: #00D4FF;
+  border: none;
+  color: #0A2540;
+  padding: 0 34px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  line-height: 40px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 15px;
+
+  &:hover {
+    background-color: lighten($primary, 12%);
+    cursor: pointer;
+  }
+}
+
+.dashboard-header {  
+  width: 100%;
+  padding: 610px 15px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color: $text;
+  position: relative;
+  z-index: 2;
+
+  p {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  h1 + p {
+    margin-bottom: 30px;
+  }
+
+  .dashboard-header-left {
+    p.text-lighting {
+      margin-bottom: 10px;
+    }
+  }
+
+  .dashboard-header-right {
+    img {
+      margin: 0 -147px 0 0;
+      position: relative;
+      z-index: 2;
+      right: -44px;
+    }
+  }
+}
+.text-lighting {
+  color: $primary;
+  font-weight: 500;
+}
+.link-functions {
+  display: inline-block;
+  margin-left: 15px;
+}
+.text-bar {
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -6px;
+    right: -6px;
+    background: rgb(1, 212, 253);
+    background: linear-gradient(90deg, rgb(1, 212, 253) 35%, rgb(168, 218, 47) 100%);
+    height: 20px;
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0.5;
+  }
+}
+.container {
+  margin: 0 auto;
+  max-width: 1120px;
+  width: 100%;
+}
+.dashboard-details {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  margin: 40px 0 100px 0;
+
+  p {
+    padding: 0 26px 0 15px;
+    color: #ADBDCC;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+}
+.dashboard-details-item {
+  position: relative;
+
+  &::before {
+    content: '';
+    border-left: 1px solid $text-white;
+    height: 2570px;
+    position: absolute;
+    left: 1px;
+    top: -1200px;
+    z-index: 0;
+    opacity: 0.14;
+  }
+  
+  &:last-child::after {
+    content: '';
+    border-left: 1px solid $text-white;
+    height: 2570px;
+    position: absolute;
+    right: 1px;
+    top: -1200px;
+    z-index: 0;
+    opacity: 0.14;
+  }
+
+  figure {
+    margin: 0;
+
+    figcaption {
+      color: $text-white;
+      font-weight: 500;
+      padding-left: 15px;
+      position: relative;
+
+      &::before {
+        content: '';
+        border-left: 2px solid $primary;
+        height: 20px;
+        position: absolute;
+        left: 0px;
+        z-index: 2;
+      }      
+    }
+    img {
+      margin: 0 0 10px 15px;
+    }
+  }
+}
+.dashboard-masorny {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding-bottom: 176px;
+  position: relative;
+  z-index: 2;
+
+  .dashboard-masorny-item {
+    box-sizing: border-box;
+    background-color: $background;
+    border-radius: 40px;
+    padding: 20px;
+  }
+  
+  .row-left {
+    .dashboard-masorny-item {
+      &:first-child {
+        margin: 94px 0 0 -51px;
+        height: 188px;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background: transparent url(./images/triangle-yellow.png) no-repeat;
+          top: -97px;
+          left: -80px;
+          height: 207px;
+          width: 202px;
+        }
+      }
+      &:last-child {
+        margin: 41px 11px 0 -65px;
+        height: 661px;
+      }
+    }
+  }
+  
+  .col-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    .dashboard-masorny-item {
+      &:first-child {
+        margin: 94px 38px 0 28px;
+        height: 487px;
+      }
+      &:last-child {
+        margin: 0 -50px 0 0;
+        height: 581px;
+      }
+    }
+  }
+  .col-bottom {
+    .dashboard-masorny-item {
+      margin: 33px -44px 0 21px;
+      height: 487px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-header,
+  .dashboard-details,
+  .dashboard-masorny {
+    display: block;
+  }
+  .dashboard-masorny {
+    .col-top {
+      display: block;
+    }
+    .row-left .dashboard-masorny-item:first-child,
+    .row-left .dashboard-masorny-item:last-child,
+    .col-top .dashboard-masorny-item:first-child,
+    .col-top .dashboard-masorny-item:last-child,
+    .col-bottom .dashboard-masorny-item {
+      margin: 0 20px 20px;
+    }
+  }
+
+  .dashboard {
+    background-position: center -110px;
+
+    h1 {
+      font-size: 30px;
+      line-height: 45px;
+    }
+
+    &::before {
+      background-attachment: fixed;
+    }
+  }
+
+  .dashboard-header {
+    box-sizing: border-box;
+    padding: 210px 15px 0;
+    width: 100%;
+
+    .dashboard-header-right img {
+      margin: 40px 0 0 0;
+      width: 100%;
+      position: static;
+    }
+  }
+
+  .dashboard-details-item {
+    margin-bottom: 50px;
+    padding: 0 15px;
+
+    &::before {
+      border: none;
+    }
+  }
+
+  .text-bar::before {
+    height: 14px;
+  }
+
+  .link-functions {
+    display: block;
+    margin: 30px 0 0 10px;
+  }
+}

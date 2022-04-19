@@ -1,0 +1,14 @@
+@import './vendor/normalize.scss';
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+#app {
+  height: 100%;
+}
